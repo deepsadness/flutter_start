@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_start/demo/animation/animation_demo.dart';
+import 'package:flutter_start/demo/pesto_demo2.dart';
 import 'package:flutter_start/model/app_state.dart';
 
-void main() => runApp(new MyInheritedApp());
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -20,7 +22,8 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new AnimationDemoHome(),
     );
   }
 }
@@ -33,6 +36,8 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
+
+class MyNotification extends Notification {}
 
 class _MyHomePageState extends State<MyHomePage> {
   void _changeState() {
@@ -47,36 +52,61 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (state == null) {
-      print('state == null');
-      state = AppStateContainer.of(context);
-    }
+//    if (state == null) {
+//      print('state == null');
+//      state = AppStateContainer.of(context);
+//    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'appState.isLoading = ${state.isLoading}',
+    return NotificationListener(
+        onNotification: (event) {
+          print("event=" + event.toString());
+          if (event is MyNotification) {
+            print("event= Scaffold MyNotification");
+          }
+        },
+        child: new Scaffold(
+            appBar: new AppBar(
+              title: new Text(widget.title),
             ),
-            new Text(
-              'appState.canListenLoading.value = ${state.canListenLoading.value}',
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _changeState,
-        tooltip: 'ChangeState',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+            body: new NotificationListener<MyNotification>(
+                onNotification: (event) {
+                  print("body event=" + event.toString());
+                },
+                child: new Center(
+                  child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      new Text(
+                        'appState.isLoading = ',
+                      ),
+                      new Text(
+                        'appState.canListenLoading.value',
+                      ),
+                    ],
+                  ),
+                )),
+//          floatingActionButton: new FloatingActionButton(
+//
+//            onPressed: () {
+//              new MyNotification().dispatch(context);
+//            },
+//            tooltip: 'ChangeState',
+//            child: new Icon(Icons.add),
+//          ),
+// This trailing comma makes auto-formatting nicer for build methods.
+            floatingActionButton: Builder(builder: (context) {
+              return FloatingActionButton(
+              onPressed: () {
+                print('context type = '+context.toString());
+
+                new MyNotification().dispatch(context);
+            },
+            tooltip: 'ChangeState',
+            child: new Icon(Icons.add),
+              );
+            })));
   }
 }

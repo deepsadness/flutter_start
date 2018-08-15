@@ -8,7 +8,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-
+  scoped_model: ^0.2.0
+  flutter_redux: ^0.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -24,7 +25,92 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  assets:
+    - flutter_gallery_assets/white_logo/logo.png
+    - flutter_gallery_assets/videos/butterfly.mp4
+    - flutter_gallery_assets/animated_flutter_lgtm.gif
+    - flutter_gallery_assets/animated_flutter_stickers.webp
+    - flutter_gallery_assets/appbar_background.jpg
+    - flutter_gallery_assets/appbar/appbar_background_layer0.png
+    - flutter_gallery_assets/appbar/appbar_background_layer1.png
+    - flutter_gallery_assets/appbar/appbar_background_layer2.png
+    - flutter_gallery_assets/appbar/appbar_background_layer3.png
+    - flutter_gallery_assets/appbar/appbar_background_layer4.png
+    - flutter_gallery_assets/appbar/appbar_background_layer5.png
+    - flutter_gallery_assets/pesto/avatar.jpg
+    - flutter_gallery_assets/pesto/image10.jpg
+    - flutter_gallery_assets/pesto/image11.jpg
+    - flutter_gallery_assets/pesto/image12.jpg
+    - flutter_gallery_assets/pesto/image13.jpg
+    - flutter_gallery_assets/pesto/image1.jpg
+    - flutter_gallery_assets/pesto/image2.jpg
+    - flutter_gallery_assets/pesto/image3.jpg
+    - flutter_gallery_assets/pesto/image4.jpg
+    - flutter_gallery_assets/pesto/image5.jpg
+    - flutter_gallery_assets/pesto/image6.jpg
+    - flutter_gallery_assets/pesto/image7.jpg
+    - flutter_gallery_assets/pesto/image8.jpg
+    - flutter_gallery_assets/pesto/image9.jpg
+    - flutter_gallery_assets/pesto/logo_small.png
+    - flutter_gallery_assets/pesto/logo_medium.png
+    - flutter_gallery_assets/pesto/fish.png
+    - flutter_gallery_assets/pesto/healthy.png
+    - flutter_gallery_assets/pesto/main.png
+    - flutter_gallery_assets/pesto/meat.png
+    - flutter_gallery_assets/pesto/quick.png
+    - flutter_gallery_assets/pesto/spicy.png
+    - flutter_gallery_assets/pesto/veggie.png
+    - flutter_gallery_assets/about_logo.png
+    - flutter_gallery_assets/ali_connors.jpg
+    - flutter_gallery_assets/drawer_logo.png
+    - flutter_gallery_assets/kangaroo_valley_safari.jpg
+    - flutter_gallery_assets/top_10_australian_beaches.jpg
+    - flutter_gallery_assets/landscape_0.jpg
+    - flutter_gallery_assets/landscape_1.jpg
+    - flutter_gallery_assets/landscape_2.jpg
+    - flutter_gallery_assets/landscape_3.jpg
+    - flutter_gallery_assets/landscape_4.jpg
+    - flutter_gallery_assets/landscape_5.jpg
+    - flutter_gallery_assets/landscape_6.jpg
+    - flutter_gallery_assets/landscape_7.jpg
+    - flutter_gallery_assets/landscape_8.jpg
+    - flutter_gallery_assets/landscape_9.jpg
+    - flutter_gallery_assets/landscape_10.jpg
+    - flutter_gallery_assets/landscape_11.jpg
+    - flutter_gallery_assets/shrine/products/backpack.png
+    - flutter_gallery_assets/shrine/products/beachball.png
+    - flutter_gallery_assets/shrine/products/binoculars.png
+    - flutter_gallery_assets/shrine/products/brush.png
+    - flutter_gallery_assets/shrine/products/chair.png
+    - flutter_gallery_assets/shrine/products/chucks.png
+    - flutter_gallery_assets/shrine/products/clock.png
+    - flutter_gallery_assets/shrine/products/fish_bowl.png
+    - flutter_gallery_assets/shrine/products/flippers.png
+    - flutter_gallery_assets/shrine/products/green-shoes.png
+    - flutter_gallery_assets/shrine/products/heels.png
+    - flutter_gallery_assets/shrine/products/helmet.png
+    - flutter_gallery_assets/shrine/products/lawn_chair.png
+    - flutter_gallery_assets/shrine/products/lipstick.png
+    - flutter_gallery_assets/shrine/products/popsicle.png
+    - flutter_gallery_assets/shrine/products/radio.png
+    - flutter_gallery_assets/shrine/products/sunnies.png
+    - flutter_gallery_assets/shrine/products/surfboard.png
+    - flutter_gallery_assets/shrine/products/teapot.png
+    - flutter_gallery_assets/shrine/vendors/16c477b.jpg
+    - flutter_gallery_assets/shrine/vendors/ali-connors.png
+    - flutter_gallery_assets/shrine/vendors/peter-carlsson.png
+    - flutter_gallery_assets/shrine/vendors/sandra-adams.jpg
+    - flutter_gallery_assets/shrine/vendors/zach.jpg
+    - flutter_gallery_assets/cupertino_navigation/person1.jpg
+    - flutter_gallery_assets/cupertino_navigation/person2.jpg
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: flutter_gallery_assets/pesto/fonts/Raleway-Regular.ttf
+        - asset: flutter_gallery_assets/pesto/fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: flutter_gallery_assets/pesto/fonts/Raleway-SemiBold.ttf
+          weight: 600
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
